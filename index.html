@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/clouds-and-sun.png" type="image/png" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="weather-application-container">
+      <div class="weather-display-item">
+        <img src="images/weather-app.png" alt="icon" />
+        <h2>-- <sup>°C</sup></h2>
+        <small>------, --</small>
+      </div>
+
+      <div class="weather-search-input">
+        <input type="text" placeholder="Ingresa una ciudad" />
+        <button aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <div class="weather-details-container">
+        <div class="weather-detail-item">
+          <i class="fa-solid fa-droplet fa-2xl"></i>
+          <aside>
+            <p class="humidity-value">-- %</p>
+            <small>Humedad</small>
+          </aside>
+        </div>
+
+        <div class="weather-detail-item">
+          <i class="fa-solid fa-wind fa-2xl"></i>
+          <aside>
+            <p class="wind-speed-value">-- km/h</p>
+            <small>V. del Viento</small>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer hidden>
+      <p>
+        <a
+          href="https://www.flaticon.com/free-icons/clouds-and-sun"
+          title="clouds and sun icons"
+          >Iconos de nubes y sol creados por riajulislam - Flaticon</a
+        >
+      </p>
+
+      <p>
+        <a
+          href="https://www.flaticon.com/free-icons/weather"
+          title="weather icons"
+          >Iconos del clima creados por Freepik - Flaticon</a
+        >
+      </p>
+
+      <p>
+        Fuentes de Google utilizadas:
+        <a href="https://fonts.google.com/specimen/Inter" title="Inter"
+          >Inter</a
+        >
+      </p>
+
+      <p>
+        Iconos de Font Awesome utilizados:
+        <a href="https://fontawesome.com/" title="Font Awesome">Font Awesome</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
