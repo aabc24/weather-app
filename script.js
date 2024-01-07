@@ -50,28 +50,31 @@ function displayWeather(data) {
   imgElement.classList.add("slideUp");
   imgElement.src = `https://openweathermap.org/img/wn/${array.icon}@2x.png`;
   imgElement.alt = `${array.description}`;
-  imgElement.focus();
-  imgElement.classList.add("slideDownWithTransition");
 
-  h2Element.classList.add("fadeOut");
-  h2Element.innerHTML = `${temp} <sup>°C</sup>`;
-  h2Element.focus();
-  h2Element.classList.add("fadeIn");
+  imgElement.onload = function () {
+    imgElement.focus();
+    imgElement.classList.add("slideDownWithTransition");
 
-  smallElement.classList.add("fadeOut");
-  smallElement.textContent = `${name}, ${country}`;
-  smallElement.focus();
-  smallElement.classList.add("fadeIn");
+    h2Element.classList.add("fadeOut");
+    h2Element.innerHTML = `${temp} <sup>°C</sup>`;
+    h2Element.focus();
+    h2Element.classList.add("fadeIn");
 
-  humidityValue.classList.add("fadeOut");
-  humidityValue.textContent = `${humidity} %`;
-  humidityValue.focus();
-  humidityValue.classList.add("fadeIn");
+    smallElement.classList.add("fadeOut");
+    smallElement.textContent = `${name}, ${country}`;
+    smallElement.focus();
+    smallElement.classList.add("fadeIn");
 
-  windSpeedValue.classList.add("fadeOut");
-  windSpeedValue.textContent = `${speed} m/s`;
-  windSpeedValue.focus();
-  windSpeedValue.classList.add("fadeIn");
+    humidityValue.classList.add("fadeOut");
+    humidityValue.textContent = `${humidity} %`;
+    humidityValue.focus();
+    humidityValue.classList.add("fadeIn");
+
+    windSpeedValue.classList.add("fadeOut");
+    windSpeedValue.textContent = `${speed} m/s`;
+    windSpeedValue.focus();
+    windSpeedValue.classList.add("fadeIn");
+  };
 }
 
 async function request(cityName) {
